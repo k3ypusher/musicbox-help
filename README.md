@@ -10,6 +10,8 @@ To add a song, paste a youtube, soundcloud, or vimeo URL.
 
 ## Commands
 
+`.commands|help` Show help.
+
 `.start` Start stream.
 
 `.stop` Stop stream
@@ -36,10 +38,14 @@ To add a song, paste a youtube, soundcloud, or vimeo URL.
 
 `.link <nick>` Link multiple nicks together.
 
+`.unlink <nick>` Unlink nicks.
+
 `.ustat [nick]` Get user stats.
 
 `.ulist [nick]` Get a list of links.
 
 `.prune <url>` Remove links from your list.
+
+`.unprune <url>` Unprune your list.
 
 `.lastfm-recent <username>` Get last track played by a user.
