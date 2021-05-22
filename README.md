@@ -28,7 +28,11 @@ To add a song, paste a youtube, soundcloud, or vimeo URL.
 
 `.random` Add random songs.
 
-`.random-<nick>` Add random songs from specific nick.
+`.random-<nick>` Add random songs from specific nick or `.random-!<nick>` to exclude a nick. `.random^<int>-<nick>` Will add multiple random songs.
+
+`.filter-<nick>` Make the stream only play songs from specific nick or `.filter-!<nick>` to exclude a nick.
+
+`.filter on|off` Turn the filter on or off.
 
 `.flag <url>` Flag a url.
 
