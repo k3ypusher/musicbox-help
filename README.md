@@ -20,6 +20,8 @@ To add a song, paste a youtube, soundcloud, or vimeo URL.
 
 `.skip|next` Skip songs.
 
+`.search <query>` Search for songs in the Database.
+
 `.np` Current track info.
 
 `.yn` Flip a coin.
