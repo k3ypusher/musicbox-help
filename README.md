@@ -6,52 +6,62 @@ All Bot commands are executed from the IRC channel.
 * Channel: #randommusic
 * [Cytube Stream](https://cytu.be/r/MusicBox)
 
-To add a song, paste a youtube, soundcloud, or vimeo URL.
+To add a song, paste a youtube, bandcamp, soundcloud, or vimeo URL.
 
 ## Commands
 
-`.commands|help` Show help.
+`.commands|.help` Show the url to this readme.
 
-`.start` Start stream.
+`.start` Start the stream.
 
-`.stop` Stop stream
+`.stop` Stop the stream.
 
-`.yt|you|youtube <query>` or `.soundcloud <query>` Query youtube or soundcloud.
+`.yt|.you|.youtube <query>` Query youtube for a song and automatically add it to the playlist.
 
-`.skip|next` Skip songs.
+`.soundcloud <query>` Query soundcloud for a song and automatically add it to the playlist.
 
-`.search <query>` Search for songs in the Database.
+`.skip|next` Skip the currently playing song.
 
-`.np` Current track info.
+`.search <query>` Search for songs in the database.
+
+`.np` Show the currently playing song.
 
 `.yn` Flip a coin.
 
-`.stats` Overall stats.
+`.8ball` Ask the magic 8 ball a question.
 
-`.random` Add random songs.
+`.stats` Overall statistics about songs in the database.
 
-`.random-<nick>` Add random songs from specific nick or `.random-!<nick>` to exclude a nick. `.random^<int>-<nick>` Will add multiple random songs.
+`.random` Add a random song to the playlist.
 
-`.filter-<nick>` Make the stream only play songs from specific nick or `.filter-!<nick>` to exclude a nick.
+`.random-<nick>` Add a random songs from a specific nick to the playlist.
+
+`.random^<int>-<nick>` Add multiple random songs from a specific nick to the playlist.
+
+`.random-!<nick>` Add a random song to the playlist but exclude a specific nick.
+
+`.filter-<nick>` Let the stream only play songs from a specific nick.
+
+`.filter-!<nick>` Let the stream not play songs from a specific nick.
 
 `.filter on|off` Turn the filter on or off.
 
-`.flag <url>` Flag a url.
+`.flag <url>` Flag a URL. **(Only Admins)**
 
-`.unflag <url>` Unflag a url.
+`.unflag <url>` Unflag a url. **(Only Admins)**
 
-`.band <name>` Get artist info from last.fm.
+`.band <name>` Show information about an artist from last.fm.
 
-`.link <nick>` Link multiple nicks together.
+`.link <nick>` If you are using multiple nicks you can link them together.
 
-`.unlink <nick>` Unlink nicks.
+`.unlink <nick>` Unlink one of your nicks.
 
-`.ustat [nick]` Get user stats.
+`.ustat [nick]` Get statistics about yourself or about a specific nick.
 
-`.ulist [nick]` Get a list of links.
+`.ulist [nick]` Get a list of links from yourself or from a specific nick.
 
-`.prune <url>` Remove links from your list.
+`.prune <url>` Remove a link from your list.
 
-`.unprune <url>` Unprune your list.
+`.unprune <url>` Un-remove a link from your list.
 
-`.lastfm-recent <username>` Get last track played by a user.
+`.lastfm-recent <username>` Show the last track scrobbled by a last.fm user.
