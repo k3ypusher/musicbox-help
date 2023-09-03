@@ -6,7 +6,7 @@ All Bot commands are executed from the IRC channel.
 * Channel: #randommusic
 * [Cytube Stream](https://cytu.be/r/MusicBox)
 
-To add a song, paste a youtube, bandcamp, soundcloud, or vimeo URL.
+To add a song, paste a youtube, bandcamp or soundcloud URL.
 
 ## Commands
 
