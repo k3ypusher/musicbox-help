@@ -65,3 +65,7 @@ To add a song, paste a youtube, bandcamp or soundcloud URL.
 `.unprune <url>` Un-remove a link from your list.
 
 `.lastfm-recent <username>` Show the last track scrobbled by a last.fm user.
+
+`.img <url>` Asciify an image from URL.
+
+`.leaderboard` Show the current leaderboard.
