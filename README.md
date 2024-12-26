@@ -30,6 +30,8 @@ To add a song, paste a youtube, bandcamp or soundcloud URL.
 
 `.8ball` Ask the magic 8 ball a question.
 
+`.choose <string>` Let the bot pick a choice for you from a list of options, seperated by any non word character (except spaces).
+
 `.stats` Overall statistics about songs in the database.
 
 `.random` Add a random song to the playlist.
