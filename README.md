@@ -1,73 +1,138 @@
 # Musicbox Help
 
-All Bot commands are executed from the IRC channel.
+All bot commands are executed from the IRC channel.
 
 * Server: irc.rizon.net
 * Channel: #randommusic
 * [Cytube Stream](https://cytu.be/r/MusicBox)
+* [Last.fm Scrobbles](https://www.last.fm/user/MusicBoxIRC)
+* [Top 50 Leaderboard](https://musicbox.gamefiar.com)
+* [We also have an API](https://github.com/ftab/musicbox-api)
 
-To add a song, paste a youtube, bandcamp or soundcloud URL.
+To add a song, simply paste a YouTube, Bandcamp or SoundCloud URL.
 
 ## Commands
 
-`.commands|.help` Show the url to this readme.
+### `.commands|.help|!help`
 
-`.start` Start the stream.
+Show the link to this README.
 
-`.stop` Stop the stream.
+### `.start` and `.stop`
 
-`.yt|.you|.youtube <query>` Query youtube for a song and automatically add it to the playlist.
+Start or stop the stream on Cytube.
 
-`.soundcloud <query>` Query soundcloud for a song and automatically add it to the playlist.
+Usually the stream is always running. Just after restarting the bot, the stream has to be started manually once.
+There is actually no reason to stop the stream, but who knows.
 
-`.skip|next` Skip the currently playing song.
+### `.yt|.you|.youtube <query>`
 
-`.search <query>` Search for songs in the database.
+Query YouTube for a song and automatically add it to the playlist on Cytube.
 
-`.np` Show the currently playing song.
+### `.soundcloud <query>`
 
-`.yn` Flip a coin.
+Query SoundCloud for a song and automatically add it to the playlist on Cytube.
 
-`.8ball` Ask the magic 8 ball a question.
+### `.random`
 
-`.choose <string>` Let the bot pick a choice for you from a list of options, seperated by any non word character (except spaces).
+Add a random song from the bot's database to the playlist on Cytube.
 
-`.stats` Overall statistics about songs in the database.
+This command has a few complicated variants:
 
-`.random` Add a random song to the playlist.
+- `.random-<nick>` will add a random song **only** from a specific user.
+- `.random-!<nick>` will add a random song **except** from a specific user.
+- `.random^<int>-<nick>` will add multiple random songs from a specific user.
 
-`.random-<nick>` Add a random songs from a specific nick to the playlist.
+### `.filter on|off`
 
-`.random^<int>-<nick>` Add multiple random songs from a specific nick to the playlist.
+Since the stream automatically adds new songs to the playlist when nothing gets posted by users, you can set a filter to include or exclude specific user submissions.
 
-`.random-!<nick>` Add a random song to the playlist but exclude a specific nick.
+Before you can turn the filter on, specify at least:
 
-`.filter-<nick>` Let the stream only play songs from a specific nick.
+- `.filter-<nick>[,nick...]` which users should be **included** or
+- `.filter-!<nick>[,nick...]` which users should be **excluded**.
 
-`.filter-!<nick>` Let the stream not play songs from a specific nick.
+Remember to turn the filter off after listening.
 
-`.filter on|off` Turn the filter on or off.
+### `.np`
 
-`.flag <url>` Flag a URL. **(Only Admins)**
+Show which song is currently playing on Cytube.
 
-`.unflag <url>` Unflag a url. **(Only Admins)**
+### `.source`
 
-`.band <name>` Show information about an artist from last.fm.
+Show which user added the currently playing song.
 
-`.link <nick>` If you are using multiple nicks you can link them together.
+### `.skip|.next`
 
-`.unlink <nick>` Unlink one of your nicks.
+Skip the currently playing song on Cytube.
 
-`.ustat [nick]` Get statistics about yourself or about a specific nick.
+### `.search <query>`
 
-`.ulist [nick]` Get a list of links from yourself or from a specific nick.
+Search for songs in the bot's database.
 
-`.prune <url>` Remove a link from your list.
+The bot will generate a [paste.ee](https://paste.ee) link for you, which contains the search results.
 
-`.unprune <url>` Un-remove a link from your list.
+### `.stats`
 
-`.lastfm-recent <username>` Show the last track scrobbled by a last.fm user.
+Show the overall statistics about songs in the bot's database.
 
-`.img <url>` Asciify an image from URL.
+### `.leaderboard`
 
-`.leaderboard` Show the current leaderboard.
+Generates a [paste.ee](https://paste.ee) link for you, which contains the current leaderboard.
+
+We also have a [graphical leaderboard](https://musicbox.gamefiar.com) of the top 50 submitters.
+
+### `.ustat [nick]`
+
+Show statistics about songs a user has posted.
+
+If no nick is passed to the command, the bot will show statistics for yourself.
+
+### `.ulist [nick]`
+
+Let the bot generate a [paste.ee](https://paste.ee) link for you, which contains all songs a user has posted.
+
+If no nick is passed to the command, the bot will generate a link for all your posted songs.
+
+### `.prune <url>` and `.unprune <url>`
+
+You can control which songs should appear on your ulist.
+
+Pruning your ulist will not affect the songs in the database.
+
+### `.flag <url>` and `.unflag <url>`
+
+Flag or unflag URLs in the bot's database.
+
+**These commands are only available to Admins!**
+
+### `.link <primarynick>` and `.unlink <primarynick>`
+
+If you are using alternative nicks on IRC, you can link each of them to your primary nick.
+
+### `.band <artist>`
+
+The bot will query the last.fm API to show information about an artist.
+
+### `lastfm-recent <username>`
+
+The bot will show the latest scrobbled song of a last.fm user.
+
+### `.yn [string]`
+
+Flip a coin, the bot will answer with YES or NO.
+
+### `.8ball [string]`
+
+Ask the magic 8 ball a question.
+
+### `.choose <string>`
+
+The bot will pick a choice for you if you have trouble to decide on something.
+
+Just pass a list of things you are uncertain about, separated by any non-word character like commas maybe. (Spaces will not work).
+
+### `.img <url>`
+
+The bot will asciify an image from an URL for you.
+
+**This command is broken at the moment.**
