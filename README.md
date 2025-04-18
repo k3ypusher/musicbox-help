@@ -11,6 +11,8 @@ All bot commands are executed from the IRC channel.
 
 To add a song, simply paste a YouTube, Bandcamp or SoundCloud URL.
 
+**Please note** if you want to share a link that is **NOT** a song, start your message with a `#` so it doesn't get added to the stream.
+
 ## Commands
 
 ### `.commands|.help|!help`
