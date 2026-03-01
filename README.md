@@ -136,3 +136,7 @@ Just pass a list of things you are uncertain about, separated by any non-word ch
 ### `.img <url>`
 
 The bot will asciify an image from an URL for you.
+
+### `.drink`
+
+Start a drinking game.
