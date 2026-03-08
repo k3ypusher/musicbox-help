@@ -1,4 +1,4 @@
-# Musicbox Help
+# THIS HAS BEEN MOVED TO https://musicbox.gamefiar.com/help
 
 All bot commands are executed from the IRC channel.
 
